@@ -6,6 +6,22 @@ module.exports = {
     hasPrev: (codeGroup, index) => {
         return index > 0
     },
+    openNorth: (northId, template) => {
+        tpl = module.exports.open(template, "north");
+        tpl = JSON.stringify(tpl);
+        tpl = tpl.split("XXX_EXIT_NORTH_XXX").join(northId + ".json#start-south")
+        tpl = JSON.parse(tpl);
+        return tpl;
+    },
+    openSouth: (southId, template) => {
+        tpl = module.exports.open(template, "south");
+        tpl = JSON.stringify(tpl);
+        tpl = tpl.split("XXX_EXIT_SOUTH_XXX").join(southId + ".json#start-north")
+        tpl = JSON.parse(tpl);
+        return tpl;
+    },
+
+
     openLeft: (codeGroup, index, template) => {
         tpl = module.exports.open(template, "west");
         tpl = JSON.stringify(tpl);

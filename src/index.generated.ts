@@ -88,6 +88,132 @@ WA.room.onLeaveZone('XXX_307_XXX', closePopUp)
 WA.room.onEnterZone('XXX_308_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '308\n\nPermanent Redirect (RFC 7538)\n', []);})
 WA.room.onLeaveZone('XXX_308_XXX', closePopUp)
 
+WA.room.onEnterZone('XXX_4XX_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '4XX\n\nclient error\n', []);})
+WA.room.onLeaveZone('XXX_4XX_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_400_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '400\n\nBad Request\n', []);})
+WA.room.onLeaveZone('XXX_400_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_401_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '401\n\nUnauthorized\n', []);})
+WA.room.onLeaveZone('XXX_401_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_402_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '402\n\nPayment Required\n', []);})
+WA.room.onLeaveZone('XXX_402_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_403_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '403\n\nForbidden\n', []);})
+WA.room.onLeaveZone('XXX_403_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_404_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '404\n\nNot Found\n', []);})
+WA.room.onLeaveZone('XXX_404_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_405_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '405\n\nMethod Not Allowed\n', []);})
+WA.room.onLeaveZone('XXX_405_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_406_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '406\n\nNot Acceptable\n', []);})
+WA.room.onLeaveZone('XXX_406_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_407_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '407\n\nProxy Authentication Required\n', []);})
+WA.room.onLeaveZone('XXX_407_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_408_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '408\n\nRequest Timeout\n', []);})
+WA.room.onLeaveZone('XXX_408_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_409_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '409\n\nConflict\n', []);})
+WA.room.onLeaveZone('XXX_409_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_410_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '410\n\nGone\n', []);})
+WA.room.onLeaveZone('XXX_410_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_411_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '411\n\nLength Required\n', []);})
+WA.room.onLeaveZone('XXX_411_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_412_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '412\n\nPrecondition Failed\n', []);})
+WA.room.onLeaveZone('XXX_412_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_413_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '413\n\nPayload Too Large\n', []);})
+WA.room.onLeaveZone('XXX_413_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_414_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '414\n\nURI Too Long\n', []);})
+WA.room.onLeaveZone('XXX_414_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_415_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '415\n\nUnsupported Media Type\n', []);})
+WA.room.onLeaveZone('XXX_415_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_416_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '416\n\nRange Not Satisfiable\n', []);})
+WA.room.onLeaveZone('XXX_416_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_417_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '417\n\nExpectation Failed\n', []);})
+WA.room.onLeaveZone('XXX_417_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_421_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '421\n\nMisdirected Request\n', []);})
+WA.room.onLeaveZone('XXX_421_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_422_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '422\n\nUnprocessable Entity\n', []);})
+WA.room.onLeaveZone('XXX_422_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_423_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '423\n\nLocked\n', []);})
+WA.room.onLeaveZone('XXX_423_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_424_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '424\n\nFailed Dependency\n', []);})
+WA.room.onLeaveZone('XXX_424_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_425_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '425\n\nToo Early\n', []);})
+WA.room.onLeaveZone('XXX_425_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_426_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '426\n\nUpgrade Required\n', []);})
+WA.room.onLeaveZone('XXX_426_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_428_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '428\n\nPrecondition Required\n', []);})
+WA.room.onLeaveZone('XXX_428_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_429_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '429\n\nToo Many Requests\n', []);})
+WA.room.onLeaveZone('XXX_429_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_431_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '431\n\nRequest Header Fields Too Large\n', []);})
+WA.room.onLeaveZone('XXX_431_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_451_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '451\n\nUnavailable For Legal Reasons\n', []);})
+WA.room.onLeaveZone('XXX_451_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_5XX_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '5XX\n\nServer Error\n', []);})
+WA.room.onLeaveZone('XXX_5XX_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_500_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '500\n\nInternal Server\n', []);})
+WA.room.onLeaveZone('XXX_500_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_501_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '501\n\nNot Implemented\n', []);})
+WA.room.onLeaveZone('XXX_501_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_502_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '502\n\nBad Gateway\n', []);})
+WA.room.onLeaveZone('XXX_502_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_503_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '503\n\nService Unavailable\n', []);})
+WA.room.onLeaveZone('XXX_503_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_504_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '504\n\nGateway Timeout\n', []);})
+WA.room.onLeaveZone('XXX_504_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_505_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '505\n\nHTTP Version not supported\n', []);})
+WA.room.onLeaveZone('XXX_505_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_506_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '506\n\nVariant Also Negotiates\n', []);})
+WA.room.onLeaveZone('XXX_506_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_507_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '507\n\nInsufficient Storage\n', []);})
+WA.room.onLeaveZone('XXX_507_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_508_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '508\n\nLoop Detected\n', []);})
+WA.room.onLeaveZone('XXX_508_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_509_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '509\n\nBandwidth Limit\n', []);})
+WA.room.onLeaveZone('XXX_509_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_510_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '510\n\nNot Extended\n', []);})
+WA.room.onLeaveZone('XXX_510_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_511_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '511\n\nNetwork Authentication Required\n', []);})
+WA.room.onLeaveZone('XXX_511_XXX', closePopUp)
+
 
 WA.room.onEnterZone('XXX_CODE_XXX', () => {
     currentPopup = WA.ui.openPopup("clockPopup", "It's \n\n" + time, []);
