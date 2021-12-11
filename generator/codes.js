@@ -31,6 +31,5 @@ module.exports = {
         mc("306", "Switch Proxy"),
         mc("307", "Temporary Redirect (since HTTP/1.1)"),
         mc("308", "Permanent Redirect (RFC 7538)"),
-
     ]
 };
