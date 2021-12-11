@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.ts',
+    entry: './src/index.generated.ts',
     devtool: 'inline-source-map',
     devServer: {
         static: ['.'],
@@ -28,7 +28,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ],
+        extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
         filename: 'script.js',
