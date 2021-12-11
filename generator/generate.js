@@ -12,17 +12,17 @@ generateCodeGroup(codes.group1);
 
 function generateCodeGroup(codeGroup) {
     codeGroup.forEach((codeItem) => {
-        numberReplacer.replace(codeItem.code, mapTemplate, "456");
+        let mapJson = numberReplacer.replace(codeItem.code, mapTemplate);
 
-        writeFile(codeItem.code, codeItem.meaning);
+        writeFile(codeItem.code, mapJson);
     })
 }
 
 
 
-function writeFile(code, meaning) {
-    console.log("writing");
-    fs.writeFile('../dist/' + code + '.json', meaning, function (err) {
+function writeFile(code, mapJson) {
+    mapJson = JSON.stringify(mapJson);
+    fs.writeFile('../' + code + '.json', mapJson, function (err) {
         if (err) return console.log(err);
         console.log('create ' + code + '.json');
     });
