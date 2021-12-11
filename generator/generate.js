@@ -1,5 +1,6 @@
 
 const fs = require('fs');
+var http = require("http");
 var args = process.argv.slice(2);
 var argv = require('minimist')(process.argv.slice(2));
 let sourceMapName = "map";
@@ -27,6 +28,7 @@ generateCodeGroup(codes.group2);
 generateCodeGroup(codes.group3);
 generateTS();
 copyAssets();
+saveScript();
 
 
 console.log("ALL DONE");
@@ -64,7 +66,6 @@ function generateTS() {
             if (err) return console.log(err);
         });
 
-
     })
 }
 
@@ -78,5 +79,19 @@ function codeToTypeScript(code) {
 }
 function copyAssets() {
     assetsManager.copyImagesToDist(mapTemplate, outPutFolderPath);
+
+}
+function saveScript() {
+
+
+
+    const file = fs.createWriteStream(outPutFolderPath + "script.js");
+    const request = http.get("http://localhost:8080/script.js", function (response) {
+        response.pipe(file);
+    });
+
+
+
+
 
 }
