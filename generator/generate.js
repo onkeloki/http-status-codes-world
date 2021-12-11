@@ -27,6 +27,8 @@ mapTemplate = require('../' + sourceMapName + '.json');
 generateCodeGroup(codes.group1);
 generateCodeGroup(codes.group2);
 generateCodeGroup(codes.group3);
+generateCodeGroup(codes.group4);
+generateCodeGroup(codes.group5);
 generateTS();
 copyAssets();
 saveScript();
@@ -41,18 +43,27 @@ function generateCodeGroup(codeGroup) {
     codeGroup.forEach((codeItem, index) => {
 
         let mapJson = numberReplacer.replace(codeItem.code, mapTemplate);
-        console.log(codeItem.code);
+
         if (maplinker.hasNext(codeGroup, index)) {
-
-
             mapJson = maplinker.openRight(codeGroup, index, mapJson);
-
-
         }
         if (maplinker.hasPrev(codeGroup, index)) {
             mapJson = maplinker.openLeft(codeGroup, index, mapJson);
+        }
+        console.log("code", codeItem.code);
+        let north = codes.getNorthByCode(codeItem.code);
+        if (codes.allCodes().indexOf(north) > -1) {
+            mapJson = maplinker.openNorth(north, mapJson);
 
         }
+        let south = codes.getSouthByCode(codeItem.code);
+        if (codes.allCodes().indexOf(south) > -1) {
+            mapJson = maplinker.openSouth(south, mapJson);
+        }
+
+
+
+
 
         mapJson = assetsManager.renameImagePath(mapJson);
         writeFile(codeItem.code, mapJson);
