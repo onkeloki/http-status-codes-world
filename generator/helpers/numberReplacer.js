@@ -7,15 +7,13 @@ module.exports = {
             let layerName = "DISPLAY_" + pos;
             tplClone.layers.forEach((layer) => {
                 if (layer.name == layerName) {
-                    console.log(layer.name + "-->" + numberStr.charAt(pos))
                     let newData = module.exports.tilesToNumber(layer.data, numbers[numberStr.charAt(pos)]);
                     layer.data = newData;
 
                 }
             });
         }
-        console.log("STRRR")
-        console.log(JSON.stringify(tplClone));
+
         return tplClone;
     },
     tilesToNumber: (originalArray, numbersArray, tileIdToReplace) => {
@@ -30,7 +28,5 @@ module.exports = {
             }
         })
         return originalArray;
-
-    }
-
+   }
 };
