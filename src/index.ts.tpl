@@ -9,6 +9,8 @@ let currentPopup: any = undefined;
 const today = new Date();
 const time = today.getHours() + ":" + today.getMinutes();
 
+
+//###TPL_HOOK###
 WA.room.onEnterZone('XXX_CODE_XXX', () => {
     currentPopup = WA.ui.openPopup("clockPopup", "It's \n\n" + time, []);
 })
