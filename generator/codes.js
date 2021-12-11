@@ -5,7 +5,7 @@ let mc = getMapConfig;
 module.exports = {
     group1: [
         mc(
-            "100",
+            "123",
             "Continue"
         ),
         mc(
