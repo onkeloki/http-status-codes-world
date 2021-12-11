@@ -4,12 +4,14 @@ function getMapConfig(code, meaning) {
 let mc = getMapConfig;
 module.exports = {
     group1: [
+        mc("1XX", "Informational response"),
         mc("100", "Continue"),
         mc("101", "Switching Protocols"),
         mc("102", "Processing"),
         mc("103", "Early Hints")
     ],
     group2: [
+        mc("2XX", "success"),
         mc("200", "OK"),
         mc("201", "Created"),
         mc("202", "Accepted"),
@@ -19,9 +21,10 @@ module.exports = {
         mc("206", "Partial Content (RFC 7233)"),
         mc("207", "Multi-Status (WebDAV; RFC 4918)"),
         mc("208", "Already Reported (WebDAV; RFC 5842)"),
-        mc("226", "M Used (RFC 3229)")
+        mc("226", "IM Used (RFC 3229)")
     ],
     group3: [
+        mc("3XX", "redirection"),
         mc("300", "Multiple Choices"),
         mc("301", "Moved Permanently"),
         mc("302", "Found (Previously \"Moved temporarily\")"),

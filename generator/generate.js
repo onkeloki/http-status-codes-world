@@ -20,6 +20,7 @@ if (!fs.existsSync(outPutFolderPath)) {
 const codes = require("./codes.js");
 const numberReplacer = require('./helpers/numberReplacer.js');
 const assetsManager = require('./helpers/assetsManager.js');
+const maplinker = require('./helpers/maplinker.js');
 
 const generatedCodes = [];
 mapTemplate = require('../' + sourceMapName + '.json');
@@ -32,10 +33,27 @@ saveScript();
 
 
 console.log("ALL DONE");
+
+
+
 function generateCodeGroup(codeGroup) {
     generatedCodes.push(...codeGroup);
-    codeGroup.forEach((codeItem) => {
+    codeGroup.forEach((codeItem, index) => {
+
         let mapJson = numberReplacer.replace(codeItem.code, mapTemplate);
+        console.log(codeItem.code);
+        if (maplinker.hasNext(codeGroup, index)) {
+
+
+            mapJson = maplinker.openRight(codeGroup, index, mapJson);
+
+
+        }
+        if (maplinker.hasPrev(codeGroup, index)) {
+            mapJson = maplinker.openLeft(codeGroup, index, mapJson);
+
+        }
+
         mapJson = assetsManager.renameImagePath(mapJson);
         writeFile(codeItem.code, mapJson);
     })
@@ -82,16 +100,10 @@ function copyAssets() {
 
 }
 function saveScript() {
-
-
-
     const file = fs.createWriteStream(outPutFolderPath + "script.js");
     const request = http.get("http://localhost:8080/script.js", function (response) {
         response.pipe(file);
     });
-
-
-
 
 
 }
