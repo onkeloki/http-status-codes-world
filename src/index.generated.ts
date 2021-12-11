@@ -10,6 +10,9 @@ const today = new Date();
 const time = today.getHours() + ":" + today.getMinutes();
 
 
+WA.room.onEnterZone('XXX_1XX_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '1XX\n\nInformational response\n', []);})
+WA.room.onLeaveZone('XXX_1XX_XXX', closePopUp)
+
 WA.room.onEnterZone('XXX_100_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '100\n\nContinue\n', []);})
 WA.room.onLeaveZone('XXX_100_XXX', closePopUp)
 
@@ -21,6 +24,9 @@ WA.room.onLeaveZone('XXX_102_XXX', closePopUp)
 
 WA.room.onEnterZone('XXX_103_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '103\n\nEarly Hints\n', []);})
 WA.room.onLeaveZone('XXX_103_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_2XX_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '2XX\n\nsuccess\n', []);})
+WA.room.onLeaveZone('XXX_2XX_XXX', closePopUp)
 
 WA.room.onEnterZone('XXX_200_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '200\n\nOK\n', []);})
 WA.room.onLeaveZone('XXX_200_XXX', closePopUp)
@@ -49,8 +55,11 @@ WA.room.onLeaveZone('XXX_207_XXX', closePopUp)
 WA.room.onEnterZone('XXX_208_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '208\n\nAlready Reported (WebDAV; RFC 5842)\n', []);})
 WA.room.onLeaveZone('XXX_208_XXX', closePopUp)
 
-WA.room.onEnterZone('XXX_226_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '226\n\nM Used (RFC 3229)\n', []);})
+WA.room.onEnterZone('XXX_226_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '226\n\nIM Used (RFC 3229)\n', []);})
 WA.room.onLeaveZone('XXX_226_XXX', closePopUp)
+
+WA.room.onEnterZone('XXX_3XX_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '3XX\n\nredirection\n', []);})
+WA.room.onLeaveZone('XXX_3XX_XXX', closePopUp)
 
 WA.room.onEnterZone('XXX_300_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '300\n\nMultiple Choices\n', []);})
 WA.room.onLeaveZone('XXX_300_XXX', closePopUp)
