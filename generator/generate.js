@@ -31,10 +31,8 @@ generateCodeGroup(codes.group4);
 generateCodeGroup(codes.group5);
 generateTS();
 copyAssets();
+
 //saveScript();
-
-
-console.log("ALL DONE");
 
 
 
@@ -112,6 +110,7 @@ function writeFile(codeItem, mapJson) {
     mapJson = JSON.stringify(mapobj);
     // msg = codeItem.code + " - " + codeItem.meaning;
     mapJson = mapJson.replace("XXX_BTN_TXT_XXX", "- - " + codeItem.code + " - -" + codeItem.meaning);
+    mapJson = mapJson.replace("XXX.mp3", codeItem.code + ".mp3");
     //mapJson = mapJson.replace("XXX_BELL_MSG_XXX", msg)
     fs.writeFile(outPutFolderPath + saveFileName + '.json', mapJson, function (err) {
         if (err) return console.log(err);
