@@ -31,7 +31,7 @@ generateCodeGroup(codes.group4);
 generateCodeGroup(codes.group5);
 generateTS();
 copyAssets();
-saveScript();
+//saveScript();
 
 
 console.log("ALL DONE");
@@ -39,6 +39,7 @@ console.log("ALL DONE");
 
 
 function generateCodeGroup(codeGroup) {
+
     generatedCodes.push(...codeGroup);
     codeGroup.forEach((codeItem, index) => {
 
@@ -61,20 +62,57 @@ function generateCodeGroup(codeGroup) {
             mapJson = maplinker.openSouth(south, mapJson);
         }
 
+        // REOVE unnused links
+
+
+        mapJson.layers.forEach((l) => {
+            if (l.name.startsWith("exit-")) {
+                l.properties.forEach((p) => {
+                    if (p.value.startsWith("XXX_EXIT")) {
+                        p.value = "main.json";
+                    }
+
+                });
+
+            }
+
+
+        });
+
 
 
 
 
         mapJson = assetsManager.renameImagePath(mapJson);
-        writeFile(codeItem.code, mapJson);
+        /*mapStr = JSON.stringify(mapJson);
+        mapStr = mapStr.replace("XXX_BELL_MSG_XXX", codeItem.code)
+        mapJson = JSON.parse(mapStr); */
+        writeFile(codeItem, mapJson);
     })
 }
 
-function writeFile(code, mapJson) {
-
+function writeFile(codeItem, mapJson) {
+    saveFileName = codeItem.code;
     mapJson = JSON.stringify(mapJson);
-    mapJson = mapJson.replace("XXX_CODE_XXX", "XXX_" + code + "_XXX")
-    fs.writeFile(outPutFolderPath + code + '.json', mapJson, function (err) {
+    // mapJson = mapJson.replace("XXX_CODE_XXX", "XXX_" + codeItem.code + "_XXX")
+
+
+
+    mapJson = mapJson.replace("1XX.json", "main.json");
+    if (saveFileName == "1XX") {
+        saveFileName = "main"
+
+
+    }
+    mapobj = JSON.parse(mapJson);
+    mapobj.tilesets.forEach((ts) => {
+        delete ts["fileName"];
+
+    })
+    mapJson = JSON.stringify(mapobj);
+    // msg = codeItem.code + " - " + codeItem.meaning;
+    //mapJson = mapJson.replace("XXX_BELL_MSG_XXX", msg)
+    fs.writeFile(outPutFolderPath + saveFileName + '.json', mapJson, function (err) {
         if (err) return console.log(err);
 
     });

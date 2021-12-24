@@ -67,7 +67,7 @@ WA.room.onLeaveZone('XXX_300_XXX', closePopUp)
 WA.room.onEnterZone('XXX_301_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '301\n\nMoved Permanently\n', []);})
 WA.room.onLeaveZone('XXX_301_XXX', closePopUp)
 
-WA.room.onEnterZone('XXX_302_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '302\n\nFound (Previously "Moved temporarily")\n', []);})
+WA.room.onEnterZone('XXX_302_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '302\n\nFound (Previously: Moved temporarily)\n', []);})
 WA.room.onLeaveZone('XXX_302_XXX', closePopUp)
 
 WA.room.onEnterZone('XXX_303_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '303\n\nSee Other (since HTTP/1.1)\n', []);})

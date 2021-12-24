@@ -1,11 +1,4 @@
 { "compressionlevel":-1,
- "editorsettings":
-    {
-     "export":
-        {
-         "target":"."
-        }
-    },
  "height":17,
  "infinite":false,
  "layers":[
@@ -17,9 +10,24 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"bellButtonText",
+                 "type":"string",
+                 "value":"XXX"
+                }, 
+                {
+                 "name":"bellPopup",
+                 "type":"string",
+                 "value":"codePopup"
+                }, 
+                {
+                 "name":"bellVariable",
+                 "type":"string",
+                 "value":"myBell"
+                }, 
+                {
                  "name":"zone",
                  "type":"string",
-                 "value":"XXX_CODE_XXX"
+                 "value":"myBell"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -343,7 +351,7 @@
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 246, 247, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 249, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":17,
          "id":61,
-         "name":"LOBBY",
+         "name":"LOBBYx",
          "opacity":1,
          "properties":[
                 {
@@ -363,15 +371,33 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":93.945092224422,
+                 "height":84.7222222222222,
                  "id":4,
                  "name":"codePopup",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":290.927399661101,
-                 "x":349.715505049264,
-                 "y":161.146133550487
+                 "width":162.5,
+                 "x":415.049452892718,
+                 "y":202.07466794385
+                }, 
+                {
+                 "height":0,
+                 "id":10,
+                 "name":"myBell",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"bell",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":493.75,
+                 "y":356.25
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -415,8 +441,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":62,
- "nextobjectid":9,
+ "nextlayerid":64,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -428,11 +454,6 @@
          "name":"mapDescription",
          "type":"string",
          "value":"A world full off http status codes"
-        }, 
-        {
-         "name":"mapImage",
-         "type":"string",
-         "value":"map.png"
         }, 
         {
          "name":"mapLink",
@@ -447,10 +468,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":"script.js"
+         "value":"https:\/\/static.rc3.world\/scripts\/default\/bundle.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"2020.12.18",
+ "tiledversion":"1.7.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -490,6 +511,12 @@
          "imagewidth":192,
          "margin":0,
          "name":"http-world-zones",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"the base was from coding monkeys.. i just overpxieled some fields"
+                }],
          "spacing":0,
          "tilecount":12,
          "tileheight":32,
@@ -541,6 +568,12 @@
          "imagewidth":64,
          "margin":0,
          "name":"worldExit",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"rc3 world exit"
+                }],
          "spacing":0,
          "tilecount":4,
          "tileheight":32,
@@ -548,6 +581,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":1.4,
+ "version":"1.6",
  "width":31
 }
