@@ -55,6 +55,7 @@ module.exports = {
         mc("415", "Unsupported Media Type"),
         mc("416", "Range Not Satisfiable"),
         mc("417", "Expectation Failed"),
+        mc("418", "I'm a teapot"),
         mc("421", "Misdirected Request"),
         mc("422", "Unprocessable Entity"),
         mc("423", "Locked"),
