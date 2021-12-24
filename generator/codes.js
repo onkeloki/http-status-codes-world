@@ -27,7 +27,7 @@ module.exports = {
         mc("3XX", "redirection"),
         mc("300", "Multiple Choices"),
         mc("301", "Moved Permanently"),
-        mc("302", "Found (Previously \"Moved temporarily\")"),
+        mc("302", "Found (Previously: Moved temporarily)"),
         mc("303", "See Other (since HTTP/1.1)"),
         mc("304", "Not Modified (RFC 7232)"),
         mc("305", "Use Proxy (since HTTP/1.1)"),
