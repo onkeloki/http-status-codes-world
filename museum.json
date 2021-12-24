@@ -12,7 +12,7 @@
                 {
                  "name":"bellButtonText",
                  "type":"string",
-                 "value":"XXX"
+                 "value":"XXX_BTN_TXT_XXX"
                 }, 
                 {
                  "name":"bellPopup",
