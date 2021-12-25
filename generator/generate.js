@@ -21,6 +21,7 @@ const codes = require("./codes.js");
 const numberReplacer = require('./helpers/numberReplacer.js');
 const assetsManager = require('./helpers/assetsManager.js');
 const maplinker = require('./helpers/maplinker.js');
+const { exec } = require('child_process');
 
 const generatedCodes = [];
 mapTemplate = require('../' + sourceMapName + '.json');
@@ -31,9 +32,16 @@ generateCodeGroup(codes.group4);
 generateCodeGroup(codes.group5);
 generateTS();
 copyAssets();
+copyToRcRepo();
+
 
 //saveScript();
 
+function copyToRcRepo() {
+    exec("cp -Raf ../dist/map/*  ../../http-status-codes-world-rc3");
+
+
+}
 
 
 function generateCodeGroup(codeGroup) {

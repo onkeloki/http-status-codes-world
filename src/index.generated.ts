@@ -145,7 +145,7 @@ WA.room.onLeaveZone('XXX_416_XXX', closePopUp)
 WA.room.onEnterZone('XXX_417_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '417\n\nExpectation Failed\n', []);})
 WA.room.onLeaveZone('XXX_417_XXX', closePopUp)
 
-WA.room.onEnterZone('XXX_418_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '418\n\n418 I'm a teapot\n', []);})
+WA.room.onEnterZone('XXX_418_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '418\n\nI'm a teapot\n', []);})
 WA.room.onLeaveZone('XXX_418_XXX', closePopUp)
 
 WA.room.onEnterZone('XXX_421_XXX', () => {    currentPopup = WA.ui.openPopup('codePopup', '421\n\nMisdirected Request\n', []);})
