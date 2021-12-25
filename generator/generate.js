@@ -72,6 +72,7 @@ function generateCodeGroup(codeGroup) {
 
 
         mapJson.layers.forEach((l) => {
+            // REOVE unnused links
             if (l.name.startsWith("exit-")) {
                 l.properties.forEach((p) => {
                     if (p.value.startsWith("XXX_EXIT")) {
@@ -80,6 +81,18 @@ function generateCodeGroup(codeGroup) {
 
                 });
 
+            }
+            if (codeItem.code == "418") {
+                if (l.name == "zone") {
+
+                    l.properties.push(
+                        {
+                            name: 'getBadge',
+                            type: 'string',
+                            value: 'qPQvTwBHhoCTCMdJO5vUViQpmJ9mWGRyld0JyZDU2U9qMMASjm'
+                        })
+                    console.log(l.properties)
+                }
             }
 
 
