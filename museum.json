@@ -475,7 +475,7 @@
         {
          "name":"mapLink",
          "type":"string",
-         "value":"https:\/\/github.com\/onkeloki\/http-status-codes-world\/"
+         "value":"https:\/\/github.com\/onkeloki\/http-status-codes-world-rc3"
         }, 
         {
          "name":"mapName",
